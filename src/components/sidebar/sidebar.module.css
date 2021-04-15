@@ -1,0 +1,30 @@
+.sidebar {
+  width: fit-content;
+  min-height: 100vh;
+  position: relative;
+}
+
+.list {
+  list-style: decimal;
+  font-size: 22px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  width: fit-content;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  width: 100vh;
+  height: 100vh;
+  /*background-color: greenyellow;*/
+  background-image: url("/img/background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(8px);
+  z-index: -1;
+}
