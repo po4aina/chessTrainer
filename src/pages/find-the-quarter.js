@@ -1,9 +1,10 @@
-import GamePage from "../components/gamePage/GamePage";
+import GameLayout from "../components/gameLayout/GameLayout";
 
 export default function FindTheQuarter() {
   return (
-    <GamePage>
-      Find the Quarter
-    </GamePage>
+    <GameLayout
+    subtitle="Find the Quarter"
+    score="15"
+    />
   );
 }

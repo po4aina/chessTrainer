@@ -4,14 +4,15 @@ import Heading from "../heading/Heading";
 import Subtitle from "../subtitle/Subtitle";
 import Button from "../button/Button";
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import CachedIcon from '@material-ui/icons/Cached';
 import sidebarStyle from "../sidebar/sidebar.module.css";
 
-export default function Sidebar({children}) {
+export default function Sidebar({subtitle, score}) {
   return (
     <>
       <Head>
         <title>
-          {children}
+          {subtitle}
         </title>
       </Head>
       <div className={sidebarStyle.wrapper}>
@@ -19,8 +20,12 @@ export default function Sidebar({children}) {
           Chess Trainer
         </Heading>
         <Subtitle>
-          {children}
+          {subtitle}
         </Subtitle>
+        <div className={sidebarStyle.score}>
+          <span>Best score: {score}</span>
+          <CachedIcon className={sidebarStyle.refreshIcon}/>
+        </div>
         <Button className={sidebarStyle.button}>
           Start
         </Button>
