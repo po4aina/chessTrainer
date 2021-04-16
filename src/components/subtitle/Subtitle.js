@@ -5,5 +5,5 @@ export default function Subtitle({children}) {
     <h2 className={subtitleStyle.subtitle}>
       {children}
     </h2>
-  )
+  );
 }

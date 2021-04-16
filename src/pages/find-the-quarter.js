@@ -5,5 +5,5 @@ export default function FindTheQuarter() {
     <Sidebar>
       Find the Quarter
     </Sidebar>
-  )
+  );
 }

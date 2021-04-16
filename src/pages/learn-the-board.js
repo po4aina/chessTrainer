@@ -3,5 +3,5 @@ export default function LearnTheBoard() {
     <div>
       HIHIHIHIHIH
     </div>
-  )
+  );
 }

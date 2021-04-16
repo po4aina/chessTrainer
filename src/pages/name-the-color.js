@@ -3,5 +3,5 @@ export default function NameTheColor() {
     <div>
       HIHIHIHIHIH
     </div>
-  )
+  );
 }

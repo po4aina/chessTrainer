@@ -5,7 +5,7 @@ import mainMenuStyle from "./mainMenu.module.css";
 export default function mainMenu () {
   return (
     <>
-      <div className={mainMenuStyle.content}>
+      <div className={mainMenuStyle.wrapper}>
         <Heading>
           Chess Trainer
         </Heading>
@@ -36,5 +36,5 @@ export default function mainMenu () {
       <div className={mainMenuStyle.background}>
       </div>
     </>
-  )
+  );
 }

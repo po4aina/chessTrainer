@@ -5,5 +5,5 @@ export default function Heading({children}) {
     <h1 className={headingStyle.heading}>
       {children}
     </h1>
-  )
+  );
 }

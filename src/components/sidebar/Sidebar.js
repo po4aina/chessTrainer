@@ -12,7 +12,7 @@ export default function Sidebar({children}) {
           {children}
         </title>
       </Head>
-      <div className={sidebarStyle.content}>
+      <div className={sidebarStyle.wrapper}>
         <Heading>
           Chess Trainer
         </Heading>
@@ -25,5 +25,5 @@ export default function Sidebar({children}) {
 
       </div>
     </>
-  )
+  );
 }
