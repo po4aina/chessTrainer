@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import Sidebar from "../components/sidebar/Sidebar";
+import Head from 'next/head';
+import MainMenu from "../components/mainMenu/MainMenu";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
           Chess Trainer
         </title>
       </Head>
-      <Sidebar/>
+      <MainMenu/>
     </>
   )
 }

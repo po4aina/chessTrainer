@@ -1,7 +1,9 @@
+import Sidebar from "../components/sidebar/Sidebar";
+
 export default function FindTheQuarter() {
   return (
-    <div>
-      HIHIHIHI
-    </div>
+    <Sidebar>
+      Find the Quarter
+    </Sidebar>
   )
 }

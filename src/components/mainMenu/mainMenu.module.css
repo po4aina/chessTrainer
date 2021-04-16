@@ -1,0 +1,38 @@
+.content {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+}
+
+.list {
+  list-style: decimal;
+  font-size: 22px;
+  width: fit-content;
+}
+
+.link {
+  text-decoration: none;
+  color: #cdcdcd;
+  font-size: 22px;
+  width: fit-content;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.list li:hover {
+  color: #ffffff;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  width: -webkit-fill-available;
+  background-image: url("/img/background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}

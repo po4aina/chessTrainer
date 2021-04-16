@@ -8,10 +8,10 @@ body {
   margin: 0px;
   padding: 0px;
   min-height: 100vh;
-  background-color: black;
-  background-image: url("/img/background.webp");
-  background-size: cover;
-  background-attachment: fixed;
+  /*background-image: url("/img/background.webp");*/
+  /*background-size: cover;*/
+  /*background-attachment: fixed;*/
   font-family: 'Montserrat', sans-serif;
   color: #cdcdcd;
+  background-color: #000000;
 }

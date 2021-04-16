@@ -1,0 +1,10 @@
+.content {
+  display: flex;
+  font-size: 20px;
+  color: #cdcdcd;
+  text-decoration: none;
+}
+
+.icon {
+  margin-right: 8px;
+}

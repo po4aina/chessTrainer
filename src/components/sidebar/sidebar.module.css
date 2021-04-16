@@ -1,39 +1,18 @@
-.sidebar {
+.content {
+  position: relative;
   display: grid;
-  place-items: center;
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-left: 70px;
 }
 
-.list {
-  list-style: decimal;
-  font-size: 22px;
-  width: fit-content;
+.background {
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  width: -webkit-fill-available;
+  background-image: url("/img/background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: blur(30px);
 }
-
-.link {
-  text-decoration: none;
-  color: #cdcdcd;
-  font-size: 22px;
-  width: fit-content;
-}
-
-.link:hover {
-  color: #ffffff;
-}
-
-.list li:hover {
-  color: #ffffff;
-}
-
-/*.background {*/
-/*  position: absolute;*/
-/*  top: 0px;*/
-/*  width: 500px;*/
-/*  height: 100vh;*/
-/*  !*background-color: greenyellow;*!*/
-/*  background-image: url("/img/background.webp");*/
-/*  background-size: cover;*/
-/*  background-attachment: fixed;*/
-/*  filter: blur(8px);*/
-/*  z-index: -1;*/
-/*}*/
