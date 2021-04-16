@@ -16,3 +16,12 @@
   z-index: -1;
   filter: blur(30px);
 }
+
+.link {
+  text-decoration: none;
+}
+
+.icon {
+  margin-right: 8px;
+  transform: scale(-1.5, -0.8);
+}

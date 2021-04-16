@@ -1,8 +1,10 @@
 import Head from "next/head";
+import Link from "next/link";
 import Heading from "../heading/Heading";
 import Subtitle from "../subtitle/Subtitle";
+import Button from "../button/Button";
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import sidebarStyle from "../sidebar/sidebar.module.css";
-import BackButton from "../backButton/backButton";
 
 export default function Sidebar({children}) {
   return (
@@ -19,7 +21,17 @@ export default function Sidebar({children}) {
         <Subtitle>
           {children}
         </Subtitle>
-        <BackButton/>
+        <Button>
+          Start
+        </Button>
+        <Link href="/">
+          <a className={sidebarStyle.link}>
+            <Button variant="transparent">
+              <ArrowRightAltIcon className={sidebarStyle.icon}/>
+              Back
+            </Button>
+          </a>
+        </Link>
       </div>
       <div className={sidebarStyle.background}>
 
