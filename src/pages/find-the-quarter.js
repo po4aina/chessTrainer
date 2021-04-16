@@ -1,9 +1,9 @@
-import Sidebar from "../components/sidebar/Sidebar";
+import GamePage from "../components/gamePage/GamePage";
 
 export default function FindTheQuarter() {
   return (
-    <Sidebar>
+    <GamePage>
       Find the Quarter
-    </Sidebar>
+    </GamePage>
   );
 }
