@@ -21,11 +21,11 @@ export default function Sidebar({children}) {
         <Subtitle>
           {children}
         </Subtitle>
-        <Button>
+        <Button className={sidebarStyle.button}>
           Start
         </Button>
         <Link href="/">
-          <a className={sidebarStyle.link}>
+          <a>
             <Button variant="transparent">
               <ArrowRightAltIcon className={sidebarStyle.icon}/>
               Back

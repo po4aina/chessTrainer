@@ -3,19 +3,7 @@
   display: grid;
   place-items: center;
   margin-top: 50px;
-}
-
-.list {
-  list-style: decimal;
   font-size: 22px;
-  width: fit-content;
-}
-
-.link {
-  text-decoration: none;
-  color: #cdcdcd;
-  font-size: 22px;
-  width: fit-content;
 }
 
 .link:hover {
@@ -33,6 +21,10 @@
   width: -webkit-fill-available;
   background-image: url("/img/background.webp");
   background-size: cover;
-  background-attachment: fixed;
   z-index: -1;
+  opacity: 0.6;
+}
+
+.menuWrapper {
+  margin-top: 24px;
 }

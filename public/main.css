@@ -15,3 +15,12 @@ body {
   color: #cdcdcd;
   background-color: #000000;
 }
+
+a {
+  text-decoration: none;
+  color: #cdcdcd;
+}
+
+a:hover {
+  color: #ffffff;
+}

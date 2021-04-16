@@ -1,37 +1,38 @@
 import Heading from "../heading/Heading";
 import Link from "next/link";
+import Button from "../button/Button";
 import mainMenuStyle from "./mainMenu.module.css";
 
-export default function mainMenu () {
+export default function mainMenu() {
   return (
     <>
       <div className={mainMenuStyle.wrapper}>
         <Heading>
           Chess Trainer
         </Heading>
-        <ul className={mainMenuStyle.list}>
-          <li>
-            <Link href="/find-the-quarter">
-              <a className={mainMenuStyle.link}>
+        <div className={mainMenuStyle.menuWrapper}>
+          <Link href="/find-the-quarter">
+            <a>
+              <Button variant="outlined">
                 Find the quarter
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/learn-the-board">
-              <a className={mainMenuStyle.link}>
+              </Button>
+            </a>
+          </Link>
+          <Link href="/learn-the-board">
+            <a>
+              <Button variant="outlined">
                 Learn the board
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/name-the-color">
-              <a className={mainMenuStyle.link}>
+              </Button>
+            </a>
+          </Link>
+          <Link href="/name-the-color">
+            <a>
+              <Button variant="outlined">
                 Name the color
-              </a>
-            </Link>
-          </li>
-        </ul>
+              </Button>
+            </a>
+          </Link>
+        </div>
       </div>
       <div className={mainMenuStyle.background}>
       </div>
