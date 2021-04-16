@@ -3,6 +3,7 @@
   display: grid;
   padding-top: 50px;
   padding-left: 70px;
+  height: fit-content;
 }
 
 .background {
@@ -32,6 +33,7 @@
 
 .refreshIcon:hover {
   color: #ffffff;
+  cursor: pointer;
 }
 
 .icon {

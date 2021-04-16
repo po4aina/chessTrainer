@@ -1,0 +1,22 @@
+import descriptionStyle from "../description/description.module.css"
+
+export default function Description() {
+  return (
+    <div className={descriptionStyle.wrapper}>
+      <p>
+        It’s funny if you don’t understand how to play this game from its title.
+      </p>
+      <p>
+        But if you really don’t, here it is:
+      </p>
+      <ul>
+        <li>
+          Click “Start”.
+        </li>
+        <li>
+          Find the quarter where randomly generated coordinate is.
+        </li>
+      </ul>
+    </div>
+  );
+}

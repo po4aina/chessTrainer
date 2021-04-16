@@ -1,0 +1,9 @@
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.p {
+  margin-bottom: 8px;
+}
