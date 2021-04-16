@@ -6,12 +6,10 @@
   font-size: 22px;
 }
 
-.link:hover {
-  color: #ffffff;
-}
-
-.list li:hover {
-  color: #ffffff;
+.link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
 .background {
@@ -27,4 +25,18 @@
 
 .menuWrapper {
   margin-top: 24px;
+}
+
+.button {
+  width: 208px;
+  font-family: 'Cinzel', serif !important;
+  text-transform: lowercase;
+}
+
+.icon {
+  display: none;
+}
+
+.link:hover .icon {
+  display: block;
 }

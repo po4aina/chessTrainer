@@ -12,24 +12,30 @@ export default function mainMenu() {
         </Heading>
         <div className={mainMenuStyle.menuWrapper}>
           <Link href="/find-the-quarter">
-            <a>
-              <Button variant="outlined">
+            <a className={mainMenuStyle.link}>
+              <img className={mainMenuStyle.icon} src="img/queen.svg"/>
+              <Button  className={mainMenuStyle.button}>
                 Find the quarter
               </Button>
+              <img className={mainMenuStyle.icon} src="img/queen.svg"/>
             </a>
           </Link>
           <Link href="/learn-the-board">
-            <a>
-              <Button variant="outlined">
+            <a className={mainMenuStyle.link}>
+              <img className={mainMenuStyle.icon} src="/img/queen.svg"/>
+              <Button  className={mainMenuStyle.button}>
                 Learn the board
               </Button>
+              <img className={mainMenuStyle.icon} src="/img/queen.svg"/>
             </a>
           </Link>
           <Link href="/name-the-color">
-            <a>
-              <Button variant="outlined">
+            <a className={mainMenuStyle.link}>
+              <img className={mainMenuStyle.icon} src="/img/queen.svg"/>
+              <Button  className={mainMenuStyle.button}>
                 Name the color
               </Button>
+              <img className={mainMenuStyle.icon} src="/img/queen.svg"/>
             </a>
           </Link>
         </div>

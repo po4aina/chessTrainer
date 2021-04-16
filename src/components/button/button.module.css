@@ -1,26 +1,20 @@
 .wrapper {
-  font-size: 20px;
-  padding: 10px 16px 10px 16px;
-  background-color: #585858;
-  color: #cdcdcd;
-  place-items: center;
-  margin-bottom: 16px;
-  border-radius: 10px;
-  border: none;
   font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
+  padding: 8px;
+  border: 0px;
+  color: #cdcdcd;
+  place-items: center;
+  border-radius: 10px;
 }
 
 .wrapperTransparent {
   background-color: transparent;
   border: none;
   border-radius: 0px;
-}
-
-.wrapperOutlined {
-  border: 1px solid #cdcdcd;
-  background-color: transparent;
 }
 
 .wrapper:active, .wrapper:focus {
@@ -30,15 +24,10 @@
 .wrapper:hover {
   cursor: pointer;
   color: #ffffff;
-  background-color: #7a7a7a;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .wrapperTransparent:hover {
   background-color: transparent;
   color: #ffffff;
 }
-
-.wrapperOutlined:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-

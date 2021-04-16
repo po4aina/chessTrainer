@@ -7,7 +7,6 @@ export default function Button({variant, children, fullWidth = false, className,
   let btnClasses = classNames({
     [buttonStyle.wrapper]: true,
     [buttonStyle.wrapperTransparent]: variant === 'transparent',
-    [buttonStyle.wrapperOutlined]: variant === 'outlined',
     [buttonStyle.fullWidth]: fullWidth,
     [className]: true
   })
