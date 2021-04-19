@@ -1,0 +1,11 @@
+.wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.squareWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: fit-content;
+  height: fit-content;
+}
