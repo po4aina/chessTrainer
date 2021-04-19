@@ -1,18 +1,19 @@
 import Sidebar from "../sidebar/Sidebar";
-import Board from "../board/Board";
+import FindBoard from "../findBoard/FindBoard";
 import Description from "../description/Description";
 import gameLayoutStyle from "../gameLayout/gameLayout.module.css";
 
-export default function GameLayout({subtitle, score}) {
+export default function GameLayout({subtitle, score, btnText, children, onClickBtn}) {
   return (
     <div className={gameLayoutStyle.wrapper}>
       <Sidebar
         className={gameLayoutStyle.wrapperChild}
         subtitle={subtitle}
         score={score}
+        btnText={btnText}
+        onClickBtn={onClickBtn}
       />
-      <Board className={gameLayoutStyle.wrapperChild}/>
-      <Description className={gameLayoutStyle.wrapperChild}/>
+      {children}
     </div>
   );
 }

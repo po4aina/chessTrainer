@@ -7,7 +7,7 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import CachedIcon from '@material-ui/icons/Cached';
 import sidebarStyle from "../sidebar/sidebar.module.css";
 
-export default function Sidebar({subtitle, score}) {
+export default function Sidebar({subtitle, score, btnText, onClickBtn}) {
   return (
     <>
       <Head>
@@ -26,8 +26,8 @@ export default function Sidebar({subtitle, score}) {
           <span>Best score: {score}</span>
           <CachedIcon className={sidebarStyle.refreshIcon}/>
         </div>
-        <Button className={sidebarStyle.button}>
-          Start
+        <Button className={sidebarStyle.button} onClick={onClickBtn}>
+          {btnText}
         </Button>
         <Link href="/">
           <a>

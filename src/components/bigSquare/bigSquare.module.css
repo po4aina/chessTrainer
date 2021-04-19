@@ -1,8 +1,12 @@
 .square {
   width: 150px;
   height: 150px;
-  background-color: black;
+  background-color: #414141;
   display: grid;
   place-content: center;
   border: 1px solid #cdcdcd;
+}
+
+.color {
+  background-color: #cdcdcd;
 }

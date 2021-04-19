@@ -4,8 +4,14 @@
 }
 
 .squareWrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: fit-content;
   height: fit-content;
+  border: 1px solid #cdcdcd;
+}
+
+.blur {
+  filter: blur(2px);
 }
