@@ -8,11 +8,13 @@ export default function FindBoard({isStart}) {
     [findBoardStyle.squareWrapper]: true,
     [findBoardStyle.blur]: isStart === true
   });
+
   function handleClick() {
     if (isStart === false) {
       alert('click!');
     }
   }
+
   return (
     <div className={findBoardStyle.wrapper}>
       <div className={findBoardClasses}>
