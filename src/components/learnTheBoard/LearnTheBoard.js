@@ -3,9 +3,8 @@ import GameLayout from "../gameLayout/GameLayout";
 import Description from "../description/Description";
 import ChessBoard from "../chessBoard/ChessBoard";
 
-function confirm(field, squareNumber) {
-  alert(squareNumber);
-  // return squareNumber === field ? true : false;
+function confirm(squareNumber, coordinate) {
+  return squareNumber === coordinate ? true : false;
 }
 
 function randomCoordinate() {
@@ -20,8 +19,8 @@ export default function LearnTheBoard() {
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState('Find the coordinate: ');
 
-  function handleSquareClick(quarterNumber, coordinate) {
-    if (confirm(coordinate, quarterNumber) === true) {
+  function handleSquareClick(squareNumber) {
+    if (confirm(squareNumber, coordinate) === true) {
       setCoordinate(randomCoordinate());
       setScore(score + 1);
       setMessage('Very well!');
@@ -37,6 +36,8 @@ export default function LearnTheBoard() {
       score={score}
     >
       <ChessBoard
+        message={message}
+        coordinate={coordinate}
         onSquareClick={handleSquareClick}
       />
       <Description/>

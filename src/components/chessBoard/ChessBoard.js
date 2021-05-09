@@ -1,5 +1,6 @@
 import chessBoardStyle from "../chessBoard/chessBoard.module.css";
 import Square from "../Square/Square.js";
+import FindCoordinate from "../findCoordinate/FindCoordinate";
 
 function renderRow(letter, onSquareClick, isOdd = true) {
   let odd =
@@ -27,18 +28,24 @@ function renderRow(letter, onSquareClick, isOdd = true) {
   return isOdd ? odd : even;
 }
 
-export default function ChessBoard({onSquareClick}) {
+export default function ChessBoard({message, coordinate, onSquareClick}) {
   return (
     <div className={chessBoardStyle.wrapper}>
-      <div className={chessBoardStyle.chessBoardWrapper}>
-        {renderRow('A', onSquareClick)}
-        {renderRow('B', onSquareClick, false)}
-        {renderRow('C', onSquareClick)}
-        {renderRow('D', onSquareClick, false)}
-        {renderRow('E', onSquareClick)}
-        {renderRow('F', onSquareClick, false)}
-        {renderRow('G', onSquareClick)}
-        {renderRow('H', onSquareClick, false)}
+      <div className={chessBoardStyle.wrapper}>
+        <FindCoordinate
+          message={message}
+          coordinate={coordinate}
+        />
+        <div className={chessBoardStyle.chessBoardWrapper}>
+          {renderRow('A', onSquareClick)}
+          {renderRow('B', onSquareClick, false)}
+          {renderRow('C', onSquareClick)}
+          {renderRow('D', onSquareClick, false)}
+          {renderRow('E', onSquareClick)}
+          {renderRow('F', onSquareClick, false)}
+          {renderRow('G', onSquareClick)}
+          {renderRow('H', onSquareClick, false)}
+        </div>
       </div>
     </div>
   );
