@@ -3,7 +3,7 @@ import FindBoard from "../findBoard/FindBoard";
 import Description from "../description/Description";
 import gameLayoutStyle from "../gameLayout/gameLayout.module.css";
 
-export default function GameLayout({subtitle, score, children}) {
+export default function GameLayout({subtitle, score, coordinate, message, onQuarterClick}) {
   return (
     <div className={gameLayoutStyle.wrapper}>
       <Sidebar
@@ -11,7 +11,12 @@ export default function GameLayout({subtitle, score, children}) {
         subtitle={subtitle}
         score={score}
       />
-      {children}
+      <FindBoard
+        onQuarterClick={onQuarterClick}
+        coordinate={coordinate}
+        message={message}
+      />
+      <Description/>
     </div>
   );
 }
