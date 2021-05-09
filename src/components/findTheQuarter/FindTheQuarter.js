@@ -3,7 +3,7 @@ import GameLayout from "../gameLayout/GameLayout";
 import FindBoard from "../findBoard/FindBoard";
 import Description from "../description/Description";
 
-function confirm(field, squareNumber) {
+function confirm(field, quarterNumber) {
   //5678 ABCD(1234) - 1
   //5678 EFGH(5678) - 2
   //1234 ABCD(1234) - 3
@@ -14,7 +14,7 @@ function confirm(field, squareNumber) {
     (letters.slice(0, 4).includes(field[0]) === true) &&
     (numbers.slice(4, 8).includes(field[1]) === true)
   ) {
-    if (squareNumber === '1') {
+    if (quarterNumber === '1') {
       return true;
     }
   }
@@ -22,7 +22,7 @@ function confirm(field, squareNumber) {
     (letters.slice(4, 8).includes(field[0]) === true) &&
     (numbers.slice(4, 8).includes(field[1]) === true)
   ) {
-    if (squareNumber === '2') {
+    if (quarterNumber === '2') {
       return true;
     }
   }
@@ -30,7 +30,7 @@ function confirm(field, squareNumber) {
     (letters.slice(0, 4).includes(field[0]) === true) &&
     (numbers.slice(0, 4).includes(field[1]) === true)
   ) {
-    if (squareNumber === '3') {
+    if (quarterNumber === '3') {
       return true;
     }
   }
@@ -38,7 +38,7 @@ function confirm(field, squareNumber) {
     (letters.slice(4, 8).includes(field[0]) === true) &&
     (numbers.slice(0, 4).includes(field[1]) === true)
   ) {
-    if (squareNumber === '4') {
+    if (quarterNumber === '4') {
       return true;
     }
   }
