@@ -24,7 +24,6 @@ export default function Sidebar({subtitle, score, btnText, onClickBtn}) {
         </Subtitle>
         <div className={sidebarStyle.score}>
           <span>Best score: {score}</span>
-          <CachedIcon className={sidebarStyle.refreshIcon}/>
         </div>
         <Link href="/">
           <a>

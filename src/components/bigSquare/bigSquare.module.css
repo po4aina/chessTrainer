@@ -7,6 +7,12 @@
   border: 1px solid #cdcdcd;
 }
 
+.square:hover {
+  cursor: pointer;
+  background-color: #cdcdcd;
+  color: #050505;
+}
+
 .color {
   background-color: #cdcdcd;
 }
