@@ -1,5 +1,7 @@
-import GameLayout from "../gameLayout/GameLayout";
 import {useState} from "react";
+import GameLayout from "../gameLayout/GameLayout";
+import FindBoard from "../findBoard/FindBoard";
+import Description from "../description/Description";
 
 function confirm(field, squareNumber) {
   //5678 ABCD(1234) - 1
@@ -68,11 +70,15 @@ export default function FindTheQuarter() {
 
   return (
     <GameLayout
-      subtitle="Find the Quarter"
+      subtitle={"Find the Quarter"}
       score={score}
-      onQuarterClick={handleQuarterClick}
-      coordinate={coordinate}
-      message={message}
-    />
+    >
+      <FindBoard
+        onQuarterClick={handleQuarterClick}
+        coordinate={coordinate}
+        message={message}
+      />
+      <Description/>
+    </GameLayout>
   );
 }

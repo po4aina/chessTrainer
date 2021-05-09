@@ -1,6 +1,5 @@
 import BigSquare from "../bigSquare/BigSquare";
 import findBoardStyle from "../findBoard/findBoard.module.css";
-import React, {useState} from "react";
 
 export default function FindBoard({onQuarterClick, coordinate, message}) {
   return (
