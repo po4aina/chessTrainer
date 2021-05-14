@@ -1,6 +1,6 @@
 import {useState} from "react";
 import GameLayout from "../gameLayout/GameLayout";
-import FindBoard from "../findBoard/FindBoard";
+import QuarterBoard from "../quarterBoard/QuarterBoard";
 import Description from "../description/Description";
 
 function confirm(field, quarterNumber) {
@@ -73,7 +73,7 @@ export default function FindTheQuarterPage() {
       subtitle={"Find the Quarter"}
       score={score}
     >
-      <FindBoard
+      <QuarterBoard
         onQuarterClick={handleQuarterClick}
         coordinate={coordinate}
         message={message}

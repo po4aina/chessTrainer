@@ -1,7 +1,7 @@
-import styles from "../findBoard/findBoard.module.css";
+import styles from ".//quarterBoard.module.css";
 import FindCoordinate from "../findCoordinate/FindCoordinate";
 
-export default function FindBoard({onQuarterClick, coordinate, message}) {
+export default function QuarterBoard({onQuarterClick, coordinate, message}) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.wrapper}>

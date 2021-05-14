@@ -1,7 +1,3 @@
-export default function NameTheColorPage() {
-  return (
-    <div>
-      HIHIHIHIHIH
-    </div>
-  );
-}
+import NameTheColorPage from "../components/nameTheColorPage/NameTheColorPage";
+
+export default NameTheColorPage;

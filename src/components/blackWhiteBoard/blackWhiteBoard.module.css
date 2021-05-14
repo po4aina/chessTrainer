@@ -1,0 +1,33 @@
+.wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.squareWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid #cdcdcd;
+}
+
+.square {
+  border: 1px solid #cdcdcd;
+  width: 150px;
+  height: 150px;
+  background-color: #212121;
+  display: grid;
+  place-content: center;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: #cdcdcd;
+  color: #050505;
+}
+
+.white:hover {
+  background-color: #cdcdcd;
+  color: #050505;
+}
