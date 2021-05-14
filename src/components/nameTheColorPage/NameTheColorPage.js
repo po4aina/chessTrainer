@@ -15,9 +15,10 @@ export default function NameTheColorPage() {
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState('Find the coordinate: ');
 
-  function handleSquareClick() {
+  function handleSquareClick(color) {
     const letter = 'ABCDEFGH';
-    if ((letter.indexOf(coordinate[0]) + 1 + Number(coordinate[1])) % 2 === 0) {
+    const black = (letter.indexOf([coordinate[0]]) + Number(coordinate[1]) + 1) % 2 === 0 ? 'BLACK' : 'WHITE';
+    if (black === color) {
       setCoordinate(randomCoordinate());
       setScore(score + 1);
       setMessage('Very well!');

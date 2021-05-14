@@ -12,8 +12,8 @@ export default function BlackWhiteBoard({ message, coordinate, onSquareClick }) 
           coordinate={coordinate}
         />
         <div className={styles.squareWrapper}>
-          <button type="button" className={blackSquareClasses} onClick={onSquareClick}>WHITE</button>
-          <button type="button" className={styles.square} onClick={onSquareClick}>BLACK</button>
+          <button type="button" className={blackSquareClasses} onClick={() => onSquareClick('WHITE')}>WHITE</button>
+          <button type="button" className={styles.square} onClick={() => onSquareClick('BLACK')}>BLACK</button>
         </div>
       </div>
     </div>
