@@ -19,6 +19,9 @@
   display: grid;
   place-content: center;
   border: 1px solid #cdcdcd;
+  color: #cdcdcd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
 
 .square:hover {

@@ -1,3 +1,3 @@
-import MainMenuPage from "../components/mainMenuPage/MainMenuPage";
+import MainMenuPage from '../components/mainMenuPage/MainMenuPage';
 
 export default MainMenuPage;

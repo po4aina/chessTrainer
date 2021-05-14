@@ -1,7 +1,7 @@
-import styles from "../findCoordinate/findCoordinate.module.css";
+import styles from './findCoordinate.module.css';
 
-export default function FindCoordinate({message, coordinate}) {
-  return(
+export default function FindCoordinate({ message, coordinate }) {
+  return (
     <>
       <div className={styles.message}>
         {message}

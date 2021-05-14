@@ -1,12 +1,12 @@
-import BlackWhiteBoard from "../blackWhiteBoard/BlackWhiteBoard";
-import GameLayout from "../gameLayout/GameLayout";
-import Description from "../description/Description";
-import {useState} from "react";
+import { useState } from 'react';
+import BlackWhiteBoard from '../blackWhiteBoard/BlackWhiteBoard';
+import GameLayout from '../gameLayout/GameLayout';
+import Description from '../description/Description';
 
 function randomCoordinate() {
-  let letter = 'ABCDEFGH';
-  let i = Math.ceil(Math.random() * 8);
-  let j = Math.ceil(Math.random() * 8);
+  const letter = 'ABCDEFGH';
+  const i = Math.ceil(Math.random() * 8);
+  const j = Math.ceil(Math.random() * 8);
   return letter[i - 1] + j;
 }
 
@@ -16,7 +16,7 @@ export default function NameTheColorPage() {
   const [message, setMessage] = useState('Find the coordinate: ');
 
   function handleSquareClick() {
-    let letter = 'ABCDEFGH';
+    const letter = 'ABCDEFGH';
     if ((letter.indexOf(coordinate[0]) + 1 + Number(coordinate[1])) % 2 === 0) {
       setCoordinate(randomCoordinate());
       setScore(score + 1);
@@ -29,7 +29,7 @@ export default function NameTheColorPage() {
 
   return (
     <GameLayout
-      subtitle={"Name the Color"}
+      subtitle="Name the Color"
       score={score}
     >
       <BlackWhiteBoard
@@ -37,7 +37,7 @@ export default function NameTheColorPage() {
         coordinate={coordinate}
         onSquareClick={handleSquareClick}
       />
-      <Description/>
+      <Description />
     </GameLayout>
   );
 }

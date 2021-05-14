@@ -1,3 +1,3 @@
-import NameTheColorPage from "../components/nameTheColorPage/NameTheColorPage";
+import NameTheColorPage from '../components/nameTheColorPage/NameTheColorPage';
 
 export default NameTheColorPage;

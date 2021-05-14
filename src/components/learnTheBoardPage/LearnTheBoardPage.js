@@ -1,12 +1,12 @@
-import {useState} from "react";
-import GameLayout from "../gameLayout/GameLayout";
-import Description from "../description/Description";
-import ChessBoard from "../chessBoard/ChessBoard";
+import { useState } from 'react';
+import GameLayout from '../gameLayout/GameLayout';
+import Description from '../description/Description';
+import ChessBoard from '../chessBoard/ChessBoard';
 
 function randomCoordinate() {
-  let letter = 'ABCDEFGH';
-  let i = Math.ceil(Math.random() * 8);
-  let j = Math.ceil(Math.random() * 8);
+  const letter = 'ABCDEFGH';
+  const i = Math.ceil(Math.random() * 8);
+  const j = Math.ceil(Math.random() * 8);
   return letter[i - 1] + j;
 }
 
@@ -28,7 +28,7 @@ export default function LearnTheBoardPage() {
 
   return (
     <GameLayout
-      subtitle={"Learn The Board"}
+      subtitle="Learn The Board"
       score={score}
     >
       <ChessBoard
@@ -36,7 +36,7 @@ export default function LearnTheBoardPage() {
         coordinate={coordinate}
         onSquareClick={handleSquareClick}
       />
-      <Description/>
+      <Description />
     </GameLayout>
   );
 }

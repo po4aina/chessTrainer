@@ -1,3 +1,3 @@
-import LearnTheBoardPage from "../components/learnTheBoardPage/LearnTheBoardPage";
+import LearnTheBoardPage from '../components/learnTheBoardPage/LearnTheBoardPage';
 
 export default LearnTheBoardPage;

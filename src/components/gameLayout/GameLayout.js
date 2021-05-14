@@ -1,7 +1,7 @@
-import styles from "../gameLayout/gameLayout.module.css";
-import Sidebar from "../sidebar/Sidebar";
+import styles from './gameLayout.module.css';
+import Sidebar from '../sidebar/Sidebar';
 
-export default function GameLayout({subtitle, score, children}) {
+export default function GameLayout({ subtitle, score, children }) {
   return (
     <div className={styles.wrapper}>
       <Sidebar

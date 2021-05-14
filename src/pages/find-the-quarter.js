@@ -1,3 +1,3 @@
-import FindTheQuarterPage from "../components/findTheQuarterPage/FindTheQuarterPage";
+import FindTheQuarterPage from '../components/findTheQuarterPage/FindTheQuarterPage';
 
 export default FindTheQuarterPage;
