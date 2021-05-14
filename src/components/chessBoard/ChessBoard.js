@@ -2,30 +2,20 @@ import styles from "../chessBoard/chessBoard.module.css";
 import Square from "../Square/Square.js";
 import FindCoordinate from "../findCoordinate/FindCoordinate";
 
-function renderRow(letter, onSquareClick, isOdd = true) {
-  let odd =
-    <div>
-      <Square text={letter + 8} isWhite={true} onClick={() => onSquareClick(letter + 8)}/>
-      <Square text={letter + 7} onClick={() => onSquareClick(letter + 7)}/>
-      <Square text={letter + 6} isWhite={true} onClick={() => onSquareClick(letter + 6)}/>
-      <Square text={letter + 5} onClick={() => onSquareClick(letter + 5)}/>
-      <Square text={letter + 4} isWhite={true} onClick={() => onSquareClick(letter + 4)}/>
-      <Square text={letter + 3} onClick={() => onSquareClick(letter + 3)}/>
-      <Square text={letter + 2} isWhite={true} onClick={() => onSquareClick(letter + 2)}/>
-      <Square text={letter + 1} onClick={() => onSquareClick(letter + 1)}/>
-    </div>;
-  let even =
-    <div>
-      <Square text={letter + 8} onClick={() => onSquareClick(letter + 8)}/>
-      <Square text={letter + 7} isWhite={true} onClick={() => onSquareClick(letter + 7)}/>
-      <Square text={letter + 6} onClick={() => onSquareClick(letter + 6)}/>
-      <Square text={letter + 5} isWhite={true} onClick={() => onSquareClick(letter + 5)}/>
-      <Square text={letter + 4} onClick={() => onSquareClick(letter + 4)}/>
-      <Square text={letter + 3} isWhite={true} onClick={() => onSquareClick(letter + 3)}/>
-      <Square text={letter + 2} onClick={() => onSquareClick(letter + 2)}/>
-      <Square text={letter + 1} isWhite={true} onClick={() => onSquareClick(letter + 1)}/>
-    </div>;
-  return isOdd ? odd : even;
+function renderChessBoard(onSquareClick) {
+  let letters = 'ABCDEFGH';
+  let chessBoard = [];
+  for (let x = 8; x > 0; x--) {
+    for (let y = 1; y < 9; y++) {
+      let coordinate = letters[y - 1] + x;
+      if ((x + y) % 2 === 0) {
+        chessBoard.push(<Square text={coordinate} onClick={() => onSquareClick(coordinate)}/>);
+      } else {
+        chessBoard.push(<Square text={coordinate} isWhite={true} onClick={() => onSquareClick(coordinate)}/>);
+      }
+    }
+  }
+  return chessBoard;
 }
 
 export default function ChessBoard({message, coordinate, onSquareClick}) {
@@ -37,14 +27,7 @@ export default function ChessBoard({message, coordinate, onSquareClick}) {
           coordinate={coordinate}
         />
         <div className={styles.chessBoardWrapper}>
-          {renderRow('A', onSquareClick)}
-          {renderRow('B', onSquareClick, false)}
-          {renderRow('C', onSquareClick)}
-          {renderRow('D', onSquareClick, false)}
-          {renderRow('E', onSquareClick)}
-          {renderRow('F', onSquareClick, false)}
-          {renderRow('G', onSquareClick)}
-          {renderRow('H', onSquareClick, false)}
+            {renderChessBoard(onSquareClick)}
         </div>
       </div>
     </div>
