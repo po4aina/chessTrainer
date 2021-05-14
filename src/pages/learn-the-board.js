@@ -1,7 +1,3 @@
-import LearnTheBoard from "../components/learnTheBoard/LearnTheBoard.js";
+import LearnTheBoardPage from "../components/learnTheBoardPage/LearnTheBoardPage";
 
-export default function LearnTheBoardPage() {
-  return (
-    <LearnTheBoard/>
-  );
-}
+export default LearnTheBoardPage;

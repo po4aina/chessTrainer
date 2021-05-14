@@ -1,11 +1,10 @@
+import styles from "../sidebar/sidebar.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import Heading from "../heading/Heading";
 import Subtitle from "../subtitle/Subtitle";
 import Button from "../button/Button";
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-import CachedIcon from '@material-ui/icons/Cached';
-import sidebarStyle from "../sidebar/sidebar.module.css";
 
 export default function Sidebar({subtitle, score, btnText, onClickBtn}) {
   return (
@@ -15,26 +14,26 @@ export default function Sidebar({subtitle, score, btnText, onClickBtn}) {
           {subtitle}
         </title>
       </Head>
-      <div className={sidebarStyle.wrapper}>
+      <div className={styles.wrapper}>
         <Heading>
           Chess Trainer
         </Heading>
         <Subtitle>
           {subtitle}
         </Subtitle>
-        <div className={sidebarStyle.score}>
+        <div className={styles.score}>
           <span>Best score: {score}</span>
         </div>
         <Link href="/">
           <a>
             <Button variant="transparent">
-              <ArrowRightAltIcon className={sidebarStyle.icon}/>
+              <ArrowRightAltIcon className={styles.icon}/>
               Back
             </Button>
           </a>
         </Link>
       </div>
-      <div className={sidebarStyle.background}>
+      <div className={styles.background}>
 
       </div>
     </>

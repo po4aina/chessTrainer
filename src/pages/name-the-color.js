@@ -1,4 +1,4 @@
-export default function NameTheColor() {
+export default function NameTheColorPage() {
   return (
     <div>
       HIHIHIHIHIH

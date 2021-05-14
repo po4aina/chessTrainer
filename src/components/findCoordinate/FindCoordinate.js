@@ -1,12 +1,12 @@
-import findCoordinateStyles from "../findCoordinate/findCoordinate.module.css";
+import styles from "../findCoordinate/findCoordinate.module.css";
 
 export default function FindCoordinate({message, coordinate}) {
   return(
     <>
-      <div className={findCoordinateStyles.message}>
+      <div className={styles.message}>
         {message}
       </div>
-      <div className={findCoordinateStyles.coordinate}>
+      <div className={styles.coordinate}>
         {coordinate}
       </div>
     </>

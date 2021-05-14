@@ -52,7 +52,7 @@ function randomCoordinate() {
   return letter[i - 1] + j;
 }
 
-export default function FindTheQuarter() {
+export default function FindTheQuarterPage() {
   const [coordinate, setCoordinate] = useState(randomCoordinate());
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState('Find the coordinate: ');

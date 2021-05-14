@@ -1,7 +1,3 @@
-import FindTheQuarter from "../components/findTheQuarter/FindTheQuarter";
+import FindTheQuarterPage from "../components/findTheQuarterPage/FindTheQuarterPage";
 
-export default function FindTheQuarterPage() {
-  return (
-    <FindTheQuarter/>
-  );
-}
+export default FindTheQuarterPage;

@@ -5,9 +5,19 @@
   color: #cdcdcd;
 }
 
+.square:hover {
+  background-color: #222222;
+  cursor: pointer;
+}
+
 .white {
   background-color: #cdcdcd;
   color: #414141;
+}
+
+.white:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
 .text {

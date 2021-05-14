@@ -1,15 +1,3 @@
-import Head from 'next/head';
-import MainMenu from "../components/mainMenu/MainMenu";
+import MainMenuPage from "../components/mainMenuPage/MainMenuPage";
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>
-          Chess Trainer
-        </title>
-      </Head>
-      <MainMenu/>
-    </>
-  );
-}
+export default MainMenuPage;

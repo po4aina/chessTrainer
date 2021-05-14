@@ -3,10 +3,6 @@ import GameLayout from "../gameLayout/GameLayout";
 import Description from "../description/Description";
 import ChessBoard from "../chessBoard/ChessBoard";
 
-function confirm(squareNumber, coordinate) {
-  return squareNumber === coordinate ? true : false;
-}
-
 function randomCoordinate() {
   let letter = 'ABCDEFGH';
   let i = Math.ceil(Math.random() * 8);
@@ -14,13 +10,13 @@ function randomCoordinate() {
   return letter[i - 1] + j;
 }
 
-export default function LearnTheBoard() {
+export default function LearnTheBoardPage() {
   const [coordinate, setCoordinate] = useState(randomCoordinate());
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState('Find the coordinate: ');
 
   function handleSquareClick(squareNumber) {
-    if (confirm(squareNumber, coordinate) === true) {
+    if (squareNumber === coordinate) {
       setCoordinate(randomCoordinate());
       setScore(score + 1);
       setMessage('Very well!');

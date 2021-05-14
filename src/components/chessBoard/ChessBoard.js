@@ -1,4 +1,4 @@
-import chessBoardStyle from "../chessBoard/chessBoard.module.css";
+import styles from "../chessBoard/chessBoard.module.css";
 import Square from "../Square/Square.js";
 import FindCoordinate from "../findCoordinate/FindCoordinate";
 
@@ -30,13 +30,13 @@ function renderRow(letter, onSquareClick, isOdd = true) {
 
 export default function ChessBoard({message, coordinate, onSquareClick}) {
   return (
-    <div className={chessBoardStyle.wrapper}>
-      <div className={chessBoardStyle.wrapper}>
+    <div className={styles.wrapper}>
+      <div className={styles.wrapper}>
         <FindCoordinate
           message={message}
           coordinate={coordinate}
         />
-        <div className={chessBoardStyle.chessBoardWrapper}>
+        <div className={styles.chessBoardWrapper}>
           {renderRow('A', onSquareClick)}
           {renderRow('B', onSquareClick, false)}
           {renderRow('C', onSquareClick)}

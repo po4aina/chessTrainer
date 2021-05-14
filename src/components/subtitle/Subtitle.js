@@ -1,8 +1,8 @@
-import subtitleStyle from "./subtitle.module.css";
+import styles from "./subtitle.module.css";
 
 export default function Subtitle({children}) {
   return (
-    <h2 className={subtitleStyle.subtitle}>
+    <h2 className={styles.subtitle}>
       {children}
     </h2>
   );
