@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import styles from './sidebar.module.css';
 import Heading from '../heading/Heading';
 import Subtitle from '../subtitle/Subtitle';
