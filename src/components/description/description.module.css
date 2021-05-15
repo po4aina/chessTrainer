@@ -1,0 +1,15 @@
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-size: 20px;
+}
+
+.paragraphWrapper {
+  width: 300px;
+}
+
+.list {
+  list-style: decimal;
+  padding-left: 24px;
+}

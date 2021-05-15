@@ -1,0 +1,48 @@
+.wrapper {
+  position: relative;
+  display: grid;
+  padding-top: 50px;
+  padding-left: 70px;
+  height: fit-content;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  width: -webkit-fill-available;
+  background-image: url("/img/background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: blur(30px);
+  opacity: 0.6;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.score > span {
+  margin-right: 8px;
+}
+
+.refreshIcon:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 8px;
+  transform: scale(-1.5, -0.8);
+}
+
+.button {
+  width: 128px;
+  margin-bottom: 8px
+}
+

@@ -1,0 +1,94 @@
+import { useState } from 'react';
+import GameLayout from '../gameLayout/GameLayout';
+import QuarterBoard from '../quarterBoard/QuarterBoard';
+import Description from '../description/Description';
+import styles from '../description/description.module.css';
+import { randomCoordinate } from "../../common/utils";
+
+function confirm(field, quarterNumber) {
+  // 5678 ABCD(1234) - 1
+  // 5678 EFGH(5678) - 2
+  // 1234 ABCD(1234) - 3
+  // 1234 EFGH(5678) - 4
+  const letters = 'ABCDEFGH';
+  const numbers = '12345678';
+  if (
+    (letters.slice(0, 4).includes(field[0]))
+    && (numbers.slice(4, 8).includes(field[1]))
+  ) {
+    if (quarterNumber === '1') {
+      return true;
+    }
+  }
+  if (
+    (letters.slice(4, 8).includes(field[0]))
+    && (numbers.slice(4, 8).includes(field[1]))
+  ) {
+    if (quarterNumber === '2') {
+      return true;
+    }
+  }
+  if (
+    (letters.slice(0, 4).includes(field[0]))
+    && (numbers.slice(0, 4).includes(field[1]))
+  ) {
+    if (quarterNumber === '3') {
+      return true;
+    }
+  }
+  if (
+    (letters.slice(4, 8).includes(field[0]))
+    && (numbers.slice(0, 4).includes(field[1]))
+  ) {
+    if (quarterNumber === '4') {
+      return true;
+    }
+  }
+  return false;
+}
+
+export default function FindTheQuarterPage() {
+  const [coordinate, setCoordinate] = useState(randomCoordinate());
+  const [score, setScore] = useState(0);
+  const [message, setMessage] = useState('Find the coordinate: ');
+
+  function handleQuarterClick(squareNumber) {
+    if (confirm(coordinate, squareNumber)) {
+      setCoordinate(randomCoordinate());
+      setScore(score + 1);
+      setMessage('Very well!');
+    } else {
+      setMessage('Wrong, but nice try!');
+      setScore(0);
+    }
+  }
+
+  return (
+    <GameLayout
+      subtitle="Find the Quarter"
+      score={score}
+    >
+      <QuarterBoard
+        onQuarterClick={handleQuarterClick}
+        coordinate={coordinate}
+        message={message}
+      />
+      <Description>
+        <p>
+          It’s funny if you don’t understand how to play this game from its title.
+        </p>
+        <p>
+          But if you really don’t, here it is:
+        </p>
+        <ul className={styles.list}>
+          <li>
+            Look above the board.
+          </li>
+          <li>
+            Find the quarter where randomly generated coordinate is.
+          </li>
+        </ul>
+      </Description>
+    </GameLayout>
+  );
+}

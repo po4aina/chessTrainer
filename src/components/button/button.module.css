@@ -1,0 +1,33 @@
+.wrapper {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border: 0px;
+  color: #cdcdcd;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.wrapperTransparent {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+}
+
+.wrapper:active, .wrapper:focus {
+  outline: none;
+}
+
+.wrapper:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.wrapperTransparent:hover {
+  background-color: transparent;
+  color: #ffffff;
+}

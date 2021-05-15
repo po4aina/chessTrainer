@@ -1,0 +1,10 @@
+.wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.chessBoardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: 1px solid #cdcdcd;
+}
