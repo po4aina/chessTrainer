@@ -2,6 +2,7 @@ import { useState } from 'react';
 import GameLayout from '../gameLayout/GameLayout';
 import Description from '../description/Description';
 import ChessBoard from '../chessBoard/ChessBoard';
+import styles from '../description/description.module.css';
 
 function randomCoordinate() {
   const letter = 'ABCDEFGH';
@@ -36,7 +37,22 @@ export default function LearnTheBoardPage() {
         coordinate={coordinate}
         onSquareClick={handleSquareClick}
       />
-      <Description />
+      <Description>
+        <p>
+          It’s funny if you don’t understand how to play this game from its title.
+        </p>
+        <p>
+          But if you really don’t, here it is:
+        </p>
+        <ul className={styles.list}>
+          <li>
+            Look above the board.
+          </li>
+          <li>
+            Find the field where randomly generated coordinate is.
+          </li>
+        </ul>
+      </Description>
     </GameLayout>
   );
 }

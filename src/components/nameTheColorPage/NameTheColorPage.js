@@ -2,6 +2,7 @@ import { useState } from 'react';
 import BlackWhiteBoard from '../blackWhiteBoard/BlackWhiteBoard';
 import GameLayout from '../gameLayout/GameLayout';
 import Description from '../description/Description';
+import styles from '../description/description.module.css';
 
 function randomCoordinate() {
   const letter = 'ABCDEFGH';
@@ -38,7 +39,22 @@ export default function NameTheColorPage() {
         coordinate={coordinate}
         onSquareClick={handleSquareClick}
       />
-      <Description />
+      <Description>
+        <p>
+          It’s funny if you don’t understand how to play this game from its title.
+        </p>
+        <p>
+          But if you really don’t, here it is:
+        </p>
+        <ul className={styles.list}>
+          <li>
+            Look above the board.
+          </li>
+          <li>
+            Choose the square with proper color of coordinate.
+          </li>
+        </ul>
+      </Description>
     </GameLayout>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import GameLayout from '../gameLayout/GameLayout';
 import QuarterBoard from '../quarterBoard/QuarterBoard';
 import Description from '../description/Description';
+import styles from '../description/description.module.css';
 
 function confirm(field, quarterNumber) {
   // 5678 ABCD(1234) - 1
@@ -78,7 +79,22 @@ export default function FindTheQuarterPage() {
         coordinate={coordinate}
         message={message}
       />
-      <Description />
+      <Description>
+        <p>
+          It’s funny if you don’t understand how to play this game from its title.
+        </p>
+        <p>
+          But if you really don’t, here it is:
+        </p>
+        <ul className={styles.list}>
+          <li>
+            Look above the board.
+          </li>
+          <li>
+            Find the quarter where randomly generated coordinate is.
+          </li>
+        </ul>
+      </Description>
     </GameLayout>
   );
 }
