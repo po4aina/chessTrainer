@@ -3,6 +3,7 @@ import GameLayout from '../gameLayout/GameLayout';
 import QuarterBoard from '../quarterBoard/QuarterBoard';
 import Description from '../description/Description';
 import styles from '../description/description.module.css';
+import { randomCoordinate } from "../../common/utils";
 
 function confirm(field, quarterNumber) {
   // 5678 ABCD(1234) - 1
@@ -12,32 +13,32 @@ function confirm(field, quarterNumber) {
   const letters = 'ABCDEFGH';
   const numbers = '12345678';
   if (
-    (letters.slice(0, 4).includes(field[0]) === true)
-    && (numbers.slice(4, 8).includes(field[1]) === true)
+    (letters.slice(0, 4).includes(field[0]))
+    && (numbers.slice(4, 8).includes(field[1]))
   ) {
     if (quarterNumber === '1') {
       return true;
     }
   }
   if (
-    (letters.slice(4, 8).includes(field[0]) === true)
-    && (numbers.slice(4, 8).includes(field[1]) === true)
+    (letters.slice(4, 8).includes(field[0]))
+    && (numbers.slice(4, 8).includes(field[1]))
   ) {
     if (quarterNumber === '2') {
       return true;
     }
   }
   if (
-    (letters.slice(0, 4).includes(field[0]) === true)
-    && (numbers.slice(0, 4).includes(field[1]) === true)
+    (letters.slice(0, 4).includes(field[0]))
+    && (numbers.slice(0, 4).includes(field[1]))
   ) {
     if (quarterNumber === '3') {
       return true;
     }
   }
   if (
-    (letters.slice(4, 8).includes(field[0]) === true)
-    && (numbers.slice(0, 4).includes(field[1]) === true)
+    (letters.slice(4, 8).includes(field[0]))
+    && (numbers.slice(0, 4).includes(field[1]))
   ) {
     if (quarterNumber === '4') {
       return true;
@@ -46,20 +47,13 @@ function confirm(field, quarterNumber) {
   return false;
 }
 
-function randomCoordinate() {
-  const letter = 'ABCDEFGH';
-  const i = Math.ceil(Math.random() * 8);
-  const j = Math.ceil(Math.random() * 8);
-  return letter[i - 1] + j;
-}
-
 export default function FindTheQuarterPage() {
   const [coordinate, setCoordinate] = useState(randomCoordinate());
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState('Find the coordinate: ');
 
   function handleQuarterClick(squareNumber) {
-    if (confirm(coordinate, squareNumber) === true) {
+    if (confirm(coordinate, squareNumber)) {
       setCoordinate(randomCoordinate());
       setScore(score + 1);
       setMessage('Very well!');

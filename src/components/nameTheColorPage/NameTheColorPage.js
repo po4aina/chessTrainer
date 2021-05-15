@@ -3,13 +3,7 @@ import BlackWhiteBoard from '../blackWhiteBoard/BlackWhiteBoard';
 import GameLayout from '../gameLayout/GameLayout';
 import Description from '../description/Description';
 import styles from '../description/description.module.css';
-
-function randomCoordinate() {
-  const letter = 'ABCDEFGH';
-  const i = Math.ceil(Math.random() * 8);
-  const j = Math.ceil(Math.random() * 8);
-  return letter[i - 1] + j;
-}
+import { randomCoordinate } from "../../common/utils";
 
 export default function NameTheColorPage() {
   const [coordinate, setCoordinate] = useState(randomCoordinate());
